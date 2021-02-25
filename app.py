@@ -24,6 +24,7 @@ def host():
     if subdomain is not None:
         "".join(ch for ch in string.printable if ch.isalnum())
     subdomain = subdomain.replace(" ", ".")
+    subdomain = subdomain + '.'
     requests.post(
         f"https://api.cloudns.net/dns/add-record.json/?auth-id={AUTH_ID}&auth-password={AUTH_PASSWORD}&domain-name=mumbl.app&record-type=A&host={subdomain}&record={SERVER_IP}&ttl=3600"
     )
