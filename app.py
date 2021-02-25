@@ -29,4 +29,4 @@ def host():
         f"https://api.cloudns.net/dns/add-record.json/?auth-id={AUTH_ID}&auth-password={AUTH_PASSWORD}&domain-name=mumbl.app&record-type=A&host={subdomain}&record={SERVER_IP}&ttl=3600"
     )
 
-    return f"Your address is: <a href='http://{subdomain}mumbl.app'>{subdomain}.mumbl.app</a>"
+    return f"Your address is: <a href='https://{subdomain}mumbl.app'>{subdomain}mumbl.app</a>"
