@@ -1,13 +1,28 @@
 <html>
 <body>
+
+<h1 style="display:none" id="hide">The mumbl is:</h1>
+<div id="update">
+</div>
+<br />
+<hr />
+
 <form method="POST" action="/">
 
-What's the mumbl? Write a short passage.
+What's your  mumbl? Write a short message.
 <input name="text" />
 
 <input type="submit" value="Save" />
 
 </form>
+
+<script>
+if (document.location.href != 'https://mumbl.app/') {
+document.getElementById("hide").style.display = "block"
+
+document.getElementById('update').textContent = document.location.host.replace(".mumbl.app", "");
+}
+</script>
 
 </body>
 
