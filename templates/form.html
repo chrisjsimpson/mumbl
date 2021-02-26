@@ -9,7 +9,7 @@
 
 <form method="POST" action="/">
 
-What's your  mumbl? Write a short message.
+What's your mumbl? Write a short message and we'll turn it into a subdomain.
 <input name="text" />
 
 <input type="submit" value="Save" />
@@ -29,6 +29,10 @@ document.getElementById("hide").style.display = "block"
 document.getElementById('update').textContent = document.location.host.replace(".mumbl.app", "");
 }
 </script>
+
+*wildcard certificate only works one level deep :( meaning one-word subdomains are http,
+(e.g. https://hello.mumbl.app) but no longer than that- (e.g. https://hello.another.mumbl.app)
+But you can still create a <em>really long</em> subdomain, it'll just be http only.
 
 </body>
 
