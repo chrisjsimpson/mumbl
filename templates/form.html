@@ -30,8 +30,8 @@ document.getElementById('update').textContent = document.location.host.replace("
 }
 </script>
 
-*wildcard certificate only works one level deep :( meaning one-word subdomains are http,
-(e.g. https://hello.mumbl.app) but no longer than that- (e.g. https://hello.another.mumbl.app)
+*wildcard certificates only work one level deep :( meaning one-word subdomains are OK and have
+certificates (courtesy of letsencrypt). So https://hello.mumbl.app works, but no longer than that- (e.g. https://hello.another.mumbl.app) will not.
 But you can still create a <em>really long</em> subdomain, it'll just be http only.
 
 </body>
